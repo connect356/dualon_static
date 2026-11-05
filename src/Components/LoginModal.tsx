@@ -18,11 +18,12 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setLoggedIn(true);
+    window.location.href = 'https://portal.dualonapp.com/login';
   };
 
   const handleReset = () => {
     setLoggedIn(false);
-    onClose();
+    window.location.href = 'https://portal.dualonapp.com/login';
   };
 
   return (

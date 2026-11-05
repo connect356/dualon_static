@@ -67,7 +67,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
         {/* Right: Static Login Button + Contact Action */}
         <div className="hidden md:flex items-center space-x-4 shrink-0">
           <a
-            href="#login"
+            href="https://portal.dualonapp.com/login"
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-800 hover:text-[#229D73] transition-colors cursor-pointer"
           >
             <User className="w-4 h-4 text-[#33CB98]" />
@@ -112,7 +112,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
 
           <div className="pt-4 border-t border-gray-100 flex flex-col gap-3">
             <a
-              href="#login"
+              href="https://portal.dualonapp.com/login"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-2.5 rounded-xl text-sm font-semibold text-gray-800 border border-gray-300 hover:bg-gray-50 flex items-center justify-center gap-2 cursor-pointer"
             >
