@@ -84,8 +84,8 @@ export default function BrandStorySection() {
                 </span>
 
                 {/* Centered Dualon Icon */}
-                <div className="relative z-10 p-4 rounded-2xl bg-[#14161E]/90 border border-[#33CB98]/40 shadow-[0_0_30px_rgba(51,203,152,0.3)]">
-                  <DualonLogo variant="icon" height={54} colorTheme="mint" />
+                <div className="relative z-10 p-5 rounded-2xl bg-[#14161E]/90 border border-[#33CB98]/40 shadow-[0_0_30px_rgba(51,203,152,0.3)]">
+                  <DualonLogo variant="icon" height={76} colorTheme="mint" />
                 </div>
               </div>
 

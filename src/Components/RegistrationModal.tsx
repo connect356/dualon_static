@@ -145,7 +145,7 @@ export default function RegistrationModal({
         ) : (
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <DualonLogo variant="horizontal" height={30} colorTheme="mint-white" />
+              <DualonLogo variant="horizontal" className="h-10 sm:h-12" colorTheme="mint-white" />
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#9966FF]/20 text-[#B892FF] border border-[#9966FF]/30">
                 Official 2026 Portal
               </span>

@@ -1,16 +1,20 @@
-import logo from '../assets/logo2.png';
+import DualonLogo from './DualonLogo';
 import { Mail, Phone, MapPin, Sparkles } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-14 px-6 md:px-12 lg:px-20 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-gray-400 py-12 sm:py-14 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto space-y-10 sm:space-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Col 1: Brand Info */}
-          <div className="space-y-4 lg:col-span-2">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2">
-              <img src={logo} alt="Dualon" className="h-10 w-auto object-contain brightness-0 invert" />
+              <DualonLogo
+                variant="horizontal"
+                colorTheme="mint-white"
+                className="h-10 sm:h-12 md:h-14"
+              />
             </div>
             <p className="text-sm text-gray-400 max-w-md leading-relaxed">
               <strong>Dualon Edtech Private Limited</strong> is a Kerala-based educational platform designed exclusively for CBSE students from Class 1 to 12. Focusing on strengthening Science and Mathematics through monthly high-quality study materials and the annual KYSSO examination.
@@ -91,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500 text-center sm:text-left">
           <div>
             © 2026 Dualon Edtech Private Limited. All rights reserved.
           </div>

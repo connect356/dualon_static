@@ -13,7 +13,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FBFA] text-gray-900 flex flex-col font-sans selection:bg-[#33CB98] selection:text-[#06231a]">
+    <div className="min-h-screen bg-[#F8FBFA] text-gray-900 flex flex-col font-sans selection:bg-[#33CB98] selection:text-[#06231a] overflow-x-hidden">
       {/* Sticky Top Navigation with Logo, About Us, Contact Us, and Static Login button */}
       <Navbar onOpenContact={scrollToContact} />
 

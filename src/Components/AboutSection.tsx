@@ -53,31 +53,31 @@ export default function AboutSection() {
   ];
 
   return (
-    <div id="about" className="space-y-24 py-20 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    <div id="about" className="space-y-16 sm:space-y-24 py-12 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 max-w-7xl mx-auto">
       
       {/* SECTION 1: ABOUT DUALON EDTECH */}
-      <section id="what-is-dualon" className="space-y-12">
-        <div className="max-w-3xl space-y-4">
+      <section id="what-is-dualon" className="space-y-8 sm:space-y-12">
+        <div className="max-w-3xl space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F8F2] border border-[#33CB98]/30 text-xs font-bold text-[#177153]">
             About Us
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
             What is Dualon Edtech?
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
             <strong className="text-gray-900">Dualon Edtech</strong> is a Kerala-based educational platform designed exclusively for CBSE students from Class 1 to 12. 
             We focus on strengthening Science and Mathematics (Physics, Chemistry, Mathematics, and Biology) through high-quality monthly study materials and an annual examination system called <strong className="text-gray-900">KYSSO</strong>.
           </p>
         </div>
 
         {/* 4 Core Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {pillars.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div 
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between"
+                className="p-5 sm:p-6 rounded-2xl bg-white border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-[#E8F8F2] text-[#229D73] flex items-center justify-center mb-4">
@@ -97,32 +97,31 @@ export default function AboutSection() {
       </section>
 
       {/* SECTION 2: WHAT STUDENTS GET EVERY MONTH */}
-      <section id="study-materials" className="bg-gradient-to-br from-[#F4FBF9] to-[#FFFFFF] border border-emerald-500/15 rounded-3xl p-8 sm:p-12 shadow-sm">
-        <div className="max-w-3xl mb-12 space-y-3">
+      <section id="study-materials" className="bg-gradient-to-br from-[#F4FBF9] to-[#FFFFFF] border border-emerald-500/15 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 shadow-sm">
+        <div className="max-w-3xl mb-8 sm:mb-12 space-y-2 sm:space-y-3">
           <span className="text-xs font-extrabold uppercase tracking-widest text-[#229D73]">
             Monthly Deliverables
           </span>
-          <h3 className="text-2xl sm:text-4xl font-extrabold text-gray-900">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900">
             What Students Get Every Month
           </h3>
-          <p className="text-gray-600 text-base">
+          <p className="text-gray-600 text-sm sm:text-base">
             Two professionally designed PDFs delivered each month through our simple and student-friendly mobile application.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           
           {/* Card 1: Syllabus-Aligned PDF */}
-          <div className="p-8 rounded-2xl bg-white border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div className="p-5 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E8F8F2] text-[#177153]">
                   PDF #1: Core CBSE
                 </span>
-                
               </div>
 
-              <h4 className="text-2xl font-bold text-gray-900">
+              <h4 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Syllabus-Aligned PDF
               </h4>
 
@@ -152,16 +151,15 @@ export default function AboutSection() {
           </div>
 
           {/* Card 2: Enrichment PDF */}
-          <div className="p-8 rounded-2xl bg-white border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div className="p-5 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-700 border border-purple-200/50">
                   PDF #2: Beyond Textbooks
                 </span>
-                
               </div>
 
-              <h4 className="text-2xl font-bold text-gray-900">
+              <h4 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Frontier Enrichment PDF
               </h4>
 
@@ -190,53 +188,53 @@ export default function AboutSection() {
       </section>
 
       {/* SECTION 3: KYSSO SCIENCE OLYMPIAD */}
-      <section id="kysso" className="space-y-12">
-        <div className="max-w-3xl space-y-4">
+      <section id="kysso" className="space-y-8 sm:space-y-12">
+        <div className="max-w-3xl space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F8F2] border border-[#33CB98]/30 text-xs font-bold text-[#177153]">
             Annual Flagship Olympiad
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
             KYSSO — Kerala Young Scholars Science Olympiad
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
             KYSSO is the annual flagship examination conducted by Dualon Edtech Private Limited for CBSE students from Class 1 to Class 12 across Kerala. 
             The examination aims to identify and reward young academic talent in Science and Mathematics while encouraging consistent learning throughout the year.
           </p>
         </div>
 
         {/* 3 Examination Levels */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 lg:gap-6">
           {olympiaLevels.map((lvl, index) => {
             const Icon = lvl.icon;
             return (
               <div 
                 key={index}
-                className="p-7 rounded-2xl bg-white border border-gray-200/90 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                className="p-4 sm:p-5 lg:p-7 rounded-2xl bg-white border border-gray-200/90 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#229D73] bg-[#E8F8F2] px-3 py-1 rounded-full">
+                  <div className="flex items-center justify-between mb-3 lg:mb-4">
+                    <span className="text-[11px] lg:text-xs font-extrabold uppercase tracking-wider text-[#229D73] bg-[#E8F8F2] px-2.5 py-0.5 lg:px-3 lg:py-1 rounded-full">
                       Stage 0{index + 1}
                     </span>
-                    <Icon className="w-5 h-5 text-gray-700" />
+                    <Icon className="w-4 h-4 lg:w-5 lg:h-5 text-gray-700" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-base sm:text-base lg:text-xl font-bold text-gray-900 mb-1.5 lg:mb-2">
                     {lvl.level}
                   </h3>
 
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-[13px] lg:text-sm text-gray-600 leading-relaxed mb-4 lg:mb-6">
                     {lvl.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100">
-                  <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                <div className="pt-3 lg:pt-4 border-t border-gray-100">
+                  <div className="text-[10px] lg:text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
                     Recognition &amp; Rewards:
                   </div>
-                  <div className="text-sm font-bold text-gray-900 flex items-center gap-2">
-                    <Trophy className="w-4 h-4 text-[#229D73] shrink-0" />
-                    <span>{lvl.rewards}</span>
+                  <div className="text-xs lg:text-sm font-bold text-gray-900 flex items-start gap-1.5 lg:gap-2">
+                    <Trophy className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#229D73] shrink-0 mt-0.5" />
+                    <span className="leading-snug">{lvl.rewards}</span>
                   </div>
                 </div>
               </div>
@@ -245,17 +243,16 @@ export default function AboutSection() {
         </div>
 
         {/* Important Points Banner */}
-        <div className="p-6 rounded-2xl bg-gray-900 text-white flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center md:text-left">
-            <h4 className="text-lg font-bold">
+        <div className="p-5 sm:p-6 rounded-2xl bg-gray-900 text-white flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
+          <div className="space-y-1">
+            <h4 className="text-base sm:text-lg font-bold">
               Conducted Annually Across Kerala (April–May)
             </h4>
-            <p className="text-sm text-gray-300">
+            <p className="text-xs sm:text-sm text-gray-300">
               Cash prizes, tablets, and laptops awarded at a mega prize distribution ceremony with celebrities and chief guests.
             </p>
           </div>
           <div className="shrink-0 flex items-center gap-2 text-xs font-bold bg-white/10 px-4 py-2.5 rounded-xl border border-white/20">
-           
             <span>Built in Kerala • For Kerala CBSE Students</span>
           </div>
         </div>

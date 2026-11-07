@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo2.png';
+import DualonLogo from './DualonLogo';
 import { Menu, X, ArrowRight, User } from 'lucide-react';
 
 interface NavbarProps {
@@ -18,20 +18,20 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-[#F0F9F6] via-[#F4FBF9] to-[#FFFFFF] text-gray-800 h-20 flex items-center sticky top-0 z-50 px-6 md:px-12 border-b border-emerald-500/10 backdrop-blur-md">
-      <div className="w-full max-w-7xl mx-auto flex justify-between items-center gap-4">
+    <nav className="bg-gradient-to-r from-[#F0F9F6] via-[#F4FBF9] to-[#FFFFFF] text-gray-800 h-20 flex items-center sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-12 border-b border-emerald-500/10 backdrop-blur-md">
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center gap-3 sm:gap-4">
         
         {/* Left: Dualon Logo */}
-        <a href="#hero" className="flex items-center cursor-pointer group shrink-0">
-          <img
-            src={logo}
-            alt="Dualon Edtech Logo"
-            className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+        <a href="#hero" className="flex items-center cursor-pointer group shrink-0 py-1" aria-label="Dualon Home">
+          <DualonLogo
+            variant="horizontal"
+            colorTheme="mint-dark"
+            className="h-9 sm:h-10 md:h-12 lg:h-13 transition-transform duration-200 group-hover:scale-105"
           />
         </a>
 
-        {/* Middle: Navigation Links */}
-        <div className="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+        {/* Middle: Navigation Links (Desktop >= lg) */}
+        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 text-sm font-semibold text-gray-700">
           <a
             href="#about"
             className="hover:text-[#229D73] transition-colors duration-200"
@@ -64,8 +64,8 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
           </a>
         </div>
 
-        {/* Right: Static Login Button + Contact Action */}
-        <div className="hidden md:flex items-center space-x-4 shrink-0">
+        {/* Right Desktop Actions (>= lg) */}
+        <div className="hidden lg:flex items-center space-x-4 shrink-0">
           <a
             href="https://portal.dualonapp.com/login"
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-800 hover:text-[#229D73] transition-colors cursor-pointer"
@@ -83,14 +83,24 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
           </button>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-xl text-gray-700 hover:text-black hover:bg-gray-100 transition-colors cursor-pointer"
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Right Tablet / Mobile Controls (< lg) */}
+        <div className="flex lg:hidden items-center gap-2 sm:gap-3 shrink-0">
+          <a
+            href="https://portal.dualonapp.com/login"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-gray-800 border border-gray-200 hover:border-[#229D73] hover:text-[#229D73] bg-white/80 transition-colors"
+          >
+            <User className="w-4 h-4 text-[#33CB98]" />
+            <span>Login</span>
+          </a>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2.5 rounded-xl text-gray-700 hover:text-black hover:bg-gray-100/80 transition-colors cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-gray-800" />}
+          </button>
+        </div>
 
       </div>
 
@@ -114,7 +124,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
             <a
               href="https://portal.dualonapp.com/login"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2.5 rounded-xl text-sm font-semibold text-gray-800 border border-gray-300 hover:bg-gray-50 flex items-center justify-center gap-2 cursor-pointer"
+              className="sm:hidden w-full py-2.5 rounded-xl text-sm font-semibold text-gray-800 border border-gray-300 hover:bg-gray-50 flex items-center justify-center gap-2 cursor-pointer"
             >
               <User className="w-4 h-4 text-[#33CB98]" />
               <span>Login</span>
@@ -127,7 +137,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
               }}
               className="w-full py-3 rounded-xl text-sm font-bold text-[#06231a] bg-gradient-to-r from-[#48d6a2] to-[#22b083] shadow-md flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Contact Us</span>
+              <span>Get in Touch</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, User, Building2, Phone, Lock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import logo from '../assets/logo2.png';
+import DualonLogo from './DualonLogo';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -32,7 +32,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl p-7 sm:p-8 text-gray-900 overflow-hidden"
+        className="relative w-full max-w-md bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-8 text-gray-900 overflow-hidden max-h-[92vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -65,7 +65,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         ) : (
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="Dualon" className="h-8 w-auto object-contain" />
+              <DualonLogo variant="horizontal" colorTheme="mint-dark" className="h-10 sm:h-11" />
               <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-gray-100 text-gray-600">
                 Portal Login
               </span>
